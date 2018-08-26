@@ -1,0 +1,41 @@
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+
+    <a class="navbar-brand ml-5" [routerLink]="['/']">
+        <img src="./../../assets/angular-logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+          Angular
+      </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav text-center">
+
+      
+      <li class="nav-item ml-lg-5" routerLinkgActive="active">
+        <a class="nav-link" [routerLink]="['/']">Inicio</a>
+      </li>
+      <li class="nav-item mr-lg-5" routerLinkgActive="active">
+        <a class="nav-link" [routerLink]="['/agregar']">Agregar</a>
+      </li>
+      <div class="d-flex justify-content-center mt-2 mt-sm-2 mt-lg-0">
+      <li class="nav-item mr-3">
+        <a class="btn btn-outline-primary" href="https://www.facebook.com/josue19924">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+
+      <li class="nav-item ">
+          <a class="btn btn-outline-danger" href="https://github.com/josuepablo75">
+              <i class="fab fa-github"></i>
+          </a>
+      </li>
+      </div>
+    </ul>
+  </div>
+</nav>
+
