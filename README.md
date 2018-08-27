@@ -4,6 +4,14 @@ El proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cl
 
 ## Resumen
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Este Demo App, consume el servicio Fake de JSON:Placeholder, debido a estos algunas acciones como delete, put no se realizan correctamente ya que no se tiene acceso a la base de datos, son practicas de Testing.
+## CRUD APP
+
+* Listar Items
+* Agregar Item 
+* Actualizar Item
+* Buscar Item 
+* Eliminar Item 
+
 
 
