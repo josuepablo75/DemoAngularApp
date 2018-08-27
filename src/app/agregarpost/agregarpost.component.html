@@ -1,3 +1,41 @@
 <div class="container mt-3">
-    <h1 class="text-center">AGREGAR POST </h1>
+
+
+  <div *ngIf="show">
+<div class="alert alert-warning alert-dismissible fade show text-center"  role="alert">
+    <strong>Exito!</strong> Se ha insertado correctamente. 
+    <button (click) = "cambiarEstado()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+
+
+    <h1 class="text-center"><strong>AGREGAR POST </strong> </h1>
+  
+    <div class="row d-flex justify-content-center">
+
+      <div class="col-lg-8">
+          <form (ngSubmit)= "agregarItem()">
+       
+              <div class="form-group">
+                  <label for="TituloArray">Titulo</label>
+                  <input class="form-control" type="text" placeholder="Ingrese un Titulo" name ="title"
+                  [(ngModel)] = "item.title">
+                  <small id="titulolHelp" class="form-text text-muted">Titulo del registro.</small>
+                </div>
+                <div class="form-group">
+                    <label for="DetalleArray">Detalles</label>
+                    <textarea class="form-control" rows="3" name="body"  [(ngModel)] = "item.body"></textarea>
+                    <small id="detallesHelp" class="form-text text-muted">Ingrese detalles del registro.</small>
+                  </div>
+              
+                <button type="submit" class="btn btn-warning text-white"><i class="fas fa-plus-circle "></i> <strong> Agregar</strong> </button>
+              </form>
+      </div>
+
+    </div>
+
+    <h4 class="mt-4 text-center text-danger"> <strong>Nota: </strong>Revise la consola para verificar la inserción <i class="fas fa-exclamation-triangle"></i></h4> 
+    
   </div>

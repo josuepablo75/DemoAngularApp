@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms'; 
 
 //Servicio para consumo APi REST
 import { ServicioappService} from './servicioapp.service'; 
@@ -40,6 +41,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule
   ],

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ServicioappService} from './../servicioapp.service'; 
 
 @Component({
   selector: 'app-agregarpost',
@@ -7,9 +8,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgregarpostComponent implements OnInit {
 
-  constructor() { }
+  item: any = {
+    title: '',
+    body: ''
+  }
+
+  lista: any[ ] = [] ;
+  show : boolean = false; 
+
+  constructor( private _servicio: ServicioappService) {
+    // console.log(this.show);
+   }
 
   ngOnInit() {
+  }
+
+  agregarItem()
+  {
+    this._servicio.insertarItem(this.item).subscribe(
+      (data:any[]) => 
+      {
+      
+           this.lista = data; 
+           this.show = true; 
+           console.log(this.lista); 
+           //console.log(this.show);
+
+           this.item.title= ''; 
+           this.item.body = '';
+        
+      }
+    )
+  }
+
+  cambiarEstado(){
+    this.show = false; 
+    //console.log(this.show);
   }
 
 }

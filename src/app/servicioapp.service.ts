@@ -24,4 +24,12 @@ export class ServicioappService {
     return this.http.get<IEmploye[]>( this._url+id); 
   }
 
+  insertarItem( item : IEmploye){
+    return this.http.post("https://jsonplaceholder.typicode.com/posts", {
+        title : item.title, 
+        body: item.body
+          }); 
+         
+  }
+
 }
