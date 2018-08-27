@@ -9,7 +9,11 @@ import {ServicioappService} from './../servicioapp.service';
 })
 export class BuscarpostComponent implements OnInit {
 
-  items: any[ ] = [] ; 
+  
+  items: any ={
+    title: '',
+    body: ''
+  }
 
   constructor( private ruta: ActivatedRoute , private _servicio: ServicioappService)
   {
