@@ -2,12 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+//Servicio para consumo APi REST
+import { ServicioappService} from './servicioapp.service'; 
+
 import { AppComponent } from './app.component';
 import { NavEncabezadoComponent } from './nav-encabezado/nav-encabezado.component';
 import { FooterComponent } from './footer/footer.component';
 import { AgregarpostComponent } from './agregarpost/agregarpost.component';
 import { ListarpostComponent } from './listarpost/listarpost.component';
 import { ErrorComponent } from './error/error.component';
+
+//HTTP 
+
+import {HttpClientModule} from '@angular/common/http'; 
+
+
+
 
 const routes: Routes = [
   { path: 'agregar', component: AgregarpostComponent },
@@ -27,9 +37,10 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes) 
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServicioappService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

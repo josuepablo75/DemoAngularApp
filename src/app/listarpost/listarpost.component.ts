@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ServicioappService} from './../servicioapp.service'; 
 
 @Component({
   selector: 'app-listarpost',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarpostComponent implements OnInit {
 
-  constructor() { }
+   items: any[ ] = [] ; 
+
+  constructor( private _servicio: ServicioappService) {
+    this._servicio.getLista().subscribe(
+      data => { 
+        this.items = data
+      // console.log(this.items); 
+      } )
+
+    
+   }
+
+  
 
   ngOnInit() {
+  
+   
   }
+
+
 
 }

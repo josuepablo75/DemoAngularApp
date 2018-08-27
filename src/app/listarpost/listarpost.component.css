@@ -1,0 +1,34 @@
+@media ( max-width : 575px){
+    .Titulo{
+      font-size: 30px;
+    }
+    .TituloArray{
+        font-size: 30px;
+    }
+}
+@media ( min-width : 576px){
+    .Titulo{
+        font-size: 35px;
+    }
+    .TituloArray{
+        font-size: 35px;
+    }
+}
+@media ( min-width : 768px){
+    .Titulo{
+        font-size: 50px;
+    }
+}
+@media ( max-width : 392px){
+    .Titulo{
+        font-size: 20px;
+    }
+    .TituloArray{
+        font-size: 20px;
+    }
+}
+
+.Avatar {
+    border-radius: 50%;
+}
+
