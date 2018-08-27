@@ -10,6 +10,11 @@ export class ListarpostComponent implements OnInit {
 
    items: any[ ] = [] ; 
 
+   editar: any ={
+     title: '',
+     body: ''
+   }
+
   constructor( private _servicio: ServicioappService) {
     this._servicio.getLista().subscribe(
       data => { 
@@ -20,13 +25,32 @@ export class ListarpostComponent implements OnInit {
     
    }
 
-  
-
   ngOnInit() {
   
    
   }
 
+  eliminarItem(id){
+    this._servicio.eliminarItems(id).subscribe(
+      data => 
+       
+      console.log("Eliminado Id: "+ id)
 
+    )
+  }
 
+  editarItem(item)
+  { 
+    this.editar = item; 
+  }
+
+  agregarItemEditado()
+  {
+    this._servicio.editarItem(this.editar).subscribe(
+      (data:any[]) => 
+      {
+          console.log(data);       
+      }
+    )
+  }
 }

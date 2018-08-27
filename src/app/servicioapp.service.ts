@@ -32,4 +32,15 @@ export class ServicioappService {
          
   }
 
+  eliminarItems(id){
+    return this.http.delete("https://jsonplaceholder.typicode.com/posts/"+id); 
+  }
+
+  editarItem(item : IEmploye){
+    return this.http.put("https://jsonplaceholder.typicode.com/posts/"+ item.id , {
+      title : item.title, 
+      body: item.body
+    }); 
+  }
+
 }

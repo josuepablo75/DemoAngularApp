@@ -31,7 +31,7 @@ export class AgregarpostComponent implements OnInit {
       
            this.lista = data; 
            this.show = true; 
-           console.log(this.lista); 
+          console.log(this.lista); 
            //console.log(this.show);
 
            this.item.title= ''; 
