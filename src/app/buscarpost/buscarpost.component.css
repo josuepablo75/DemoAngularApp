@@ -1,0 +1,29 @@
+@media ( max-width : 575px){
+    .Titulo{
+      font-size: 30px;
+    }
+    .Cuerpo{
+        font-size: 25px;
+    }
+}
+@media ( min-width : 576px){
+    .Titulo{
+        font-size: 35px;
+    }
+    .Cuerpo{
+        font-size: 35px;
+    }
+}
+@media ( min-width : 768px){
+    .Titulo{
+        font-size: 60px;
+    }
+}
+@media ( max-width : 392px){
+    .Titulo{
+        font-size: 20px;
+    }
+    .Cuerpo{
+        font-size: 16px;
+    }
+}

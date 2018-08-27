@@ -14,13 +14,15 @@ import { ErrorComponent } from './error/error.component';
 
 //HTTP 
 
-import {HttpClientModule} from '@angular/common/http'; 
+import {HttpClientModule} from '@angular/common/http';
+import { BuscarpostComponent } from './buscarpost/buscarpost.component'; 
 
 
 
 
 const routes: Routes = [
   { path: 'agregar', component: AgregarpostComponent },
+  { path: 'buscar/:id', component: BuscarpostComponent  },
   { path: 'error', component: ErrorComponent },
   { path: '', component: ListarpostComponent , pathMatch: 'full' },
   { path: '**', redirectTo: 'error', pathMatch: 'full' },
@@ -33,7 +35,8 @@ const routes: Routes = [
     FooterComponent,
     AgregarpostComponent,
     ListarpostComponent,
-    ErrorComponent
+    ErrorComponent,
+    BuscarpostComponent
   ],
   imports: [
     BrowserModule,
